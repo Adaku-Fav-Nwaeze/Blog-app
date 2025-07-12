@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects-"My blogs"</title>
+</head>
+<body>
+    <h1>My projects</h1>
+    <ul>
+        {% for project in projects %}
+        <li>
+            <a href="{{ url_for('show_project', id=project.id) }}">{{ project.name }}</a> – {{ project.description }}
+        </li>
+        {% endfor %}
+    </ul>
+    <a href="/">Back to home</a>
+</body>
+</html>
